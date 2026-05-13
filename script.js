@@ -107,7 +107,7 @@ function openModal(product) {
     modalPrice.innerText = product.price;
 
     const message = `Merhaba Ayliz! Moonlight sitemden "${product.name}" ürününü gördüm ve sipariş vermek istiyorum.`;
-    modalWA.href = `https://wa.me/90661?text=${encodeURIComponent(message)}`;
+    modalWA.href = `https://wa.me/905XXXXXXXXXX?text=${encodeURIComponent(message)}`;
 
     modal.style.display = "block";
     document.body.style.overflow = "hidden"; 
