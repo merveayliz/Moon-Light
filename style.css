@@ -1,6 +1,7 @@
-/* --- TEMEL AYARLAR --- */
 * {
-    margin: 0; padding: 0; box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -17,16 +18,25 @@ body {
     overflow-x: hidden;
 }
 
-/* --- GİRİŞ ANİMASYONU --- */
 #intro-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
     background: linear-gradient(135deg, var(--shonil-pink), var(--shonil-blue));
-    display: flex; justify-content: center; align-items: center;
-    z-index: 10000; animation: fadeOut 1s ease forwards 2.5s;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    z-index: 10000;
+    animation: fadeOut 1s ease forwards 2.5s;
 }
 
 .intro-text {
-    color: white; font-size: 3rem; font-weight: 800; letter-spacing: 5px;
+    color: white; 
+    font-size: 3rem; 
+    font-weight: 800; 
+    letter-spacing: 5px;
     animation: pofuduk 2s infinite ease-in-out;
 }
 
@@ -39,59 +49,78 @@ body {
 
 .header {
     position: fixed;
-    top: 0; width: 100%;
+    top: 0;
+    width: 100%;
     padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Cam efekti */
+    backdrop-filter: blur(10px); 
     z-index: 1000;
 }
 
-
 .logo { font-weight: 700; color: var(--shonil-red); letter-spacing: 1px; }
 
-/* Dropdown Menü Stilleri */
 .dropbtn {
-    background: none; border: none;
-    font-size: 1rem; font-weight: 600;
-    color: #555; cursor: pointer;
+    background: none; 
+    border: none;
+    font-size: 1rem; 
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .dropdown { position: relative; display: inline-block; }
+
 .dropdown-content {
-    display: none; position: absolute;
-    background: white; min-width: 160px;
+    display: none; 
+    position: absolute;
+    background: white; 
+    min-width: 160px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border-radius: 10px; right: 0;
+    border-radius: 10px; 
+    right: 0;
 }
+
 .dropdown-content a {
-    color: #555; padding: 12px 16px;
-    text-decoration: none; display: block;
+    color: #555;
+    padding: 12px 16px;
+    text-decoration: none; 
+    display: block;
 }
 .dropdown-content  :hover{ background-color: #e1306c; padding: 12px 16px; color: #000000;}
+
 .dropdown:hover .dropdown-content { display: block; background-color: #ffb0bf;}
 
-/* --- FİLTRE BUTONLARI --- */
 .filter-container {
-    display: flex; justify-content: center; gap: 10px; margin: 100px 0 30px;
-    padding: 0 5%; overflow-x: auto; scrollbar-width: none;
+    display: flex; 
+    justify-content: center;
+    gap: 10px; 
+    margin: 100px 0 30px;
+    padding: 0 5%;
+    overflow-x: auto; 
+    scrollbar-width: none;
 }
+
 .filter-container::-webkit-scrollbar { display: none; }
 
 .filter-btn {
-    padding: 8px 20px; border: 2px solid var(--shonil-pink);
-    background: transparent; color: var(--shonil-pink);
-    border-radius: 20px; cursor: pointer; white-space: nowrap; transition: 0.3s;
+    padding: 8px 20px; 
+    border: 2px solid var(--shonil-pink);
+    background: transparent; 
+    color: var(--shonil-pink);
+    border-radius: 20px; 
+    cursor: pointer; 
+    white-space: nowrap; 
+    transition: 0.3s;
 }
 
 .filter-btn.active, .filter-btn:hover {
     background: var(--shonil-pink); color: white;
 }
 
-/* --- ÜRÜN KARTLARI --- */
 .product-grid {
     display: grid; 
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -135,20 +164,27 @@ body {
     object-fit: cover; 
 }
 
-/* --- MODAL STİLLERİ --- */
 .modal {
-    display: none; position: fixed;
-    z-index: 2000; top: 0; left: 0;
-    width: 100%; height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(26, 26, 46, 0.8);
     backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background: white; margin: 5% auto;
-    width: 90%; max-width: 800px;
-    border-radius: 25px; position: relative;
-    padding: 30px; animation: modalOpen 0.5s;
+    background: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 25px;
+    position: relative;
+    padding: 30px; 
+    animation: modalOpen 0.5s;
 }
 
 @keyframes modalOpen {
@@ -185,38 +221,31 @@ body {
 }
 .buy-btn:hover{ background-color: #a0047ee9;}
 
-/* --- FOOTER --- */
+
 .footer { padding: 30px 10px; text-align: center; background: white; margin-top: 50px; }
+
 .footer p { font-size: 0.8rem; margin-bottom: 15px; }
+
 .social-links { display: flex; justify-content: center; gap: 20px; }
+
 .social-links a { font-size: 1.5rem; color: #555; transition: 0.3s; }
+
 .social-links a:hover { transform: translateY(-8px); }
+
 .social-links a.li:hover { color: #0077b5; }
 .social-links a.gh:hover { color: #333; }
 .social-links a.ig:hover { color: #e1306c; }
 .social-links a.wa:hover { color: #25d366; }
+
 @media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
-        padding: 0 8px !important;
-    }
+    
+    .product-grid { grid-template-columns: repeat(3, 1fr) !important;  gap: 8px !important; padding: 0 8px !important;  }
+    
+    .product-card { padding-bottom: 25px !important;}
 
-    .product-card {
-        padding-bottom: 25px !important;
-    }
+    .product-card h3 { font-size: 0.55rem !important; }
 
-    .product-card h3 {
-        font-size: 0.55rem !important; /* Yazı taşmasını önlemek için */
-    }
-
-    .product-card p {
-        font-size: 0.65rem !important;
-        margin-bottom: 5px; /* Fiyatı yukarı çektik */
-    }
-
-    .product-card::after {
-        font-size: 0.5rem;
-        bottom: 3px;
-    }
+    .product-card p { font-size: 0.65rem !important;margin-bottom: 5px; }
+    
+    .product-card::after {font-size: 0.5rem;  bottom: 3px;}
 }
